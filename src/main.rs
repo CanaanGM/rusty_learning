@@ -7,6 +7,8 @@
 
 // }
 
+mod madelbrot;
+
 fn find_needle(){
     let needle = 0o204; // 132
     let haystack = [1,1,2,5,15,52,203,877,4140,132, 21147];
@@ -24,7 +26,9 @@ fn find_needle(){
 fn main() {
     
     find_needle();
+    let madelbrot = madelbrot:: calculate_mandlebrot(1000, -2.0, 1.0, -1.0, 1.0, 100, 30);
 
+    madelbrot::render_mandelbrot(madelbrot);
     // stringy_stuff::stringy();
     println!("")
 }
