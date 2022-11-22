@@ -8,7 +8,7 @@ async fn first_contact() {
     println!("Greetings = {:#?}", greeting);
 }
 
-async fn greet_fast_alien() -> Result<String, Box<dyn std::error::Error>>{
+pub async fn greet_fast_alien() -> Result<String, Box<dyn std::error::Error>>{
     let client = reqwest::Client::new();
     let body = client.get("http://localhost:8989")
         .send()
